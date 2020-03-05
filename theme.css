@@ -1,0 +1,26 @@
+body{
+
+	background-color: #41b3a3;
+}
+
+#rock,#paper,#scissor{
+
+	display: inline-block;
+	background-color: transparent;
+	outline: none;
+	border:none;
+
+}
+.head{
+	font-size: 50px;
+	text-align: center;
+}
+#rock .img,#paper .img,#scissor .img{
+		max-height:400px;
+		max-width: 400px;
+
+	}
+.buttons{
+	padding-top: 175px;
+	text-align: center;
+}

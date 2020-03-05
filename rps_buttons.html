@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissor!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="theme.css">
+</head>
+<body>
+
+	<div class='head'>WHAT'S YOUR CHOICE?</div>
+	<div class='buttons'>
+	<button id="rock"><img class="img" src="rock.png"><h2>ROCK</button>
+	<button id="paper"><img class="img" src="scissors--left.png"><h2>PAPER</button>
+	<button id="scissor"><img class="img" src="paper--left.png"><h2>SCISSOR</button></button></div>
+	<script>
+		
+		let scorep=0;
+		let scorec=0;
+		let x= Math.floor(Math.random()*3);
+		let ip='';
+		let user=0;
+		let com;
+		let res;
+		let resf;
+		console.log(x);
+		const btn1=document.querySelector('#rock');
+		const btn2=document.querySelector('#paper');
+		const btn3=document.querySelector('#scissor');
+		const btn4=document.querySelector('#result');
+		btn1.addEventListener('click',()=>{ip='rock',input(ip),refreshPage()});
+		btn2.addEventListener('click',()=>{ip='paper',input(ip),refreshPage()});
+		btn3.addEventListener('click',()=>{ip='scissor',input(ip),refreshPage()});
+		
+		function input(ip){
+			console.log("123");
+		if(ip=="rock" || ip== "Rock")
+			user=0;
+		else if(ip=="paper" || ip== "Paper")
+			user=1;
+		else if(ip=="scissor" || ip== "Scissor")
+			user=2;
+		computerplay(x);
+		}
+
+		function computerplay(x){
+			if(x==0)
+				com='Computer Chose Rock';
+			if(x==1)
+				com='Computer Chose Paper';
+			if(x==2)
+				com='Computer Chose Scissor';
+			outcome(user,x);
+		}
+
+		function refreshPage()
+		{
+   			 window.location.reload();
+		}
+
+		function outcome(user,x){
+			if(user==0 && x==2)
+			{
+				res='CONGRATS YOU WIN!!!';
+				scorep++;
+			}
+			if(user==0 && x==1)
+			{
+				res='SORRY YOU LOSE!!!';
+				scorec++;
+			}
+			if(user==1 && x==0)
+			{
+				res='CONGRATS YOU WIN!!!';
+				scorep++;
+			}
+			if(user==1 && x==2)
+			{
+				res='SORRY YOU LOSE!!!';
+				scorec++;
+			}
+			if(user==2 && x==0)
+			{
+				res='SORRY YOU LOSE!!!';
+				scorec++;
+			}
+			if(user==2 && x==1)
+			{
+				res='CONGRATS YOU WIN!!!';
+				scorep++;
+			}
+			if(user==x)
+			{
+				res='IT\'S A DRAW';
+			}
+
+
+
+
+
+		alert(res+"\n"+"You chose "+ip+"\n"+com+"\n")
+		/*
+		document.write("You chose "+ip);
+		document.write("<br>");
+		document.write(com);
+		document.write("<br>");
+		document.write(res);
+		document.write("<br>");
+		*/
+		}
+		
+		
+		
+	
+	/*function score(scorec,scorep){
+		if(scorec<scorep)
+			document.write("You Won The Game By "+(scorep-scorec)+" Points");
+		if(scorec>scorep)
+			document.write("You Lost The Game By "+(scorec-scorep)+" Points");
+		if(scorec==scorep)
+			document.write("The Game Is A Tie");
+	}
+	score(scorec,scorep);*/
+
+	
+	console.log(scorec);
+
+	</script>
+</body>
+</html>
