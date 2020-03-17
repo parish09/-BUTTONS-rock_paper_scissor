@@ -23,4 +23,13 @@ body{
 .buttons{
 	padding-top: 175px;
 	text-align: center;
+
 }
+
+.img{
+	transition: transform .2s;
+}
+.img:hover{
+	transform: scale(1.1);	
+}
+
