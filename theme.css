@@ -1,35 +1,38 @@
-body{
-
-	background-color: #41b3a3;
+body {
+    background-color: #41b3a3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#rock,#paper,#scissor{
-
-	display: inline-block;
-	background-color: transparent;
-	outline: none;
-	border:none;
-
-}
-.head{
-	font-size: 50px;
-	text-align: center;
-}
-#rock .img,#paper .img,#scissor .img{
-		max-height:400px;
-		max-width: 400px;
-
-	}
-.buttons{
-	padding-top: 175px;
-	text-align: center;
-
+#rock,
+#paper,
+#scissor {
+    display: inline-block;
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 
-.img{
-	transition: transform .2s;
-}
-.img:hover{
-	transform: scale(1.1);	
+.head {
+    font-size: 50px;
+    text-align: center;
 }
 
+#rock .img,
+#paper .img,
+#scissor .img {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.buttons {
+    padding-top: 175px;
+    text-align: center;
+}
+
+.img {
+    transition: transform .2s;
+}
+
+.img:hover {
+    transform: scale(1.1);
+}
